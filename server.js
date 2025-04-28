@@ -12,11 +12,11 @@ const PORT = 3000;
 app.use(express.json());
 app.use(require('cors')());
 
-// Setup email transporter using Nodemailer (use your SMTP service)
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // You can use any other service like SendGrid or Mailgun
+    service: 'gmail', 
     auth: {
-        user: process.env.GMAIL_USER, // Your Gmail or other service
+        user: process.env.GMAIL_USER, 
         pass: process.env.GMAIL_PASS,
     },
 });
